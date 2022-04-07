@@ -1,0 +1,7 @@
+.App {
+  text-align: center;
+  background-image: url('https://res.cloudinary.com/deif2qotx/image/upload/v1649349793/spaceBg_rharaq.webp');
+  background-size: 100%;
+  background-attachment: fixed;
+  height: 100%;
+}
