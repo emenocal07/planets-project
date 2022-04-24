@@ -6,34 +6,33 @@ import './PlanetListPage.css'
 
 const PlanetListPage = () => {
 
-    const [planets, setPlanets] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
+  const [planets, setPlanets] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() => {
-        planetService
-            .getAllPlanets()
-            .then(response => {
-                setPlanets(response.data)
-                setIsLoading(false)
-                console.log(response.data)
-            })
-            .catch(err => console.log(err))
-    }, [])
-
+  useEffect(() => {
+    planetService
+      .getAllPlanets()
+      .then(response => {
+        setPlanets(response.data)
+        setIsLoading(false)
+      })
+      .catch(err => console.log(err))
+  }, [])
 
 
 
-    return (
 
-        <Container className='planetListContainer'>
-            <Row>
+  return (
 
-                {isLoading
-                    ? <h1>Loading...</h1>
-                    : planets.map(planet => <Col xs={6} md={4} key={planet._id}><PlanetCard {...planet} /></Col>)}
+    <Container className='planetListContainer'>
+      <Row>
 
-            </Row>
-        </Container>
-    )
+        {isLoading
+          ? <h1>Loading...</h1>
+          : planets.map(planet => <Col xs={6} md={4} key={planet._id}><PlanetCard {...planet} /></Col>)}
+
+      </Row>
+    </Container>
+  )
 }
 export default PlanetListPage

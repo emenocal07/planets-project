@@ -24,7 +24,7 @@ router.get('/:planet_id', (req, res) => {
 
 //CREATE PLANET
 
-router.post('/save', (req, res) => {
+router.post('/create', (req, res) => {
     const { name, image, velocity, distance, description } = req.body
 
     Planet

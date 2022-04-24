@@ -1,0 +1,15 @@
+.nasaDetails {
+    background-color: transparent;
+}
+
+.nasaImg {
+    width: 70%;
+    display: block;
+    margin: 0px auto;
+   }
+
+   .nasaText {
+       text-align: justify;
+       margin: 0px auto;
+       width: 70%;
+   }

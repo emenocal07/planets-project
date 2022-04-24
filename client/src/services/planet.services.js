@@ -14,7 +14,7 @@ class PlanetService {
     }
 
     savePlanet = planet => {
-        return this.api.post(`planets/save`, planet)
+        return this.api.post(`planets/create`, planet)
     }
 
 }

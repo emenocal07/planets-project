@@ -1,5 +1,21 @@
-.header {
-    padding-top: 80px;
+.main {
+    padding: 60px;
+    color: white;
+    display: flex;
     height: 100vh;
-    color: white
+
+}
+
+.nasaBtn {
+    background-color: transparent;
+    border-color: transparent;
+    width: 30vh;
+}
+
+.btnImg {
+    width: 100%;
+}
+
+article {
+    margin: 40px
 }
