@@ -1,4 +1,4 @@
-import { Card, Col, Row } from 'react-bootstrap'
+import { Card, Col, Container, Row } from 'react-bootstrap'
 import './PlanetDetails.css'
 const PlanetDetails = ({ planetDetails }) => {
     const { name, image, description, velocity, distance, _id } = planetDetails
@@ -6,14 +6,14 @@ const PlanetDetails = ({ planetDetails }) => {
     console.log(name, image, description, velocity, distance, _id)
     return (
 
-        <>
+        <Container>
 
             <Card className='detailsCard'>
                 <Row>
-                    <Col>
-                        <Card.Img variant="top" style={{ width: '90%' }} src={image} />
+                    <Col sm>
+                        <Card.Img variant="top" className='detailsImg' src={image} />
                     </Col>
-                    <Col>
+                    <Col sm>
                         <Card.Body className='detailsText'>
                             <Card.Title><h1>{name}</h1></Card.Title>
                             <Card.Text>
@@ -31,7 +31,7 @@ const PlanetDetails = ({ planetDetails }) => {
 
             </Card>
 
-        </>
+        </Container>
     )
 }
 

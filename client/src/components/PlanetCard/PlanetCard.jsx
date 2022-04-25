@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 const PlanetCard = ({ name, image, _id }) => {
 
     return (
-        <Container>
-
+        
             <Link to={`/planets/${_id}`}>
                 <Card className="planetCard text-white" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={image} />
@@ -16,7 +15,6 @@ const PlanetCard = ({ name, image, _id }) => {
                 </Card>
 
             </Link>
-        </Container>
     )
 }
 

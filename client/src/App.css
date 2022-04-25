@@ -1,11 +1,12 @@
 .App {
   text-align: center;
   background-image: url('https://res.cloudinary.com/deif2qotx/image/upload/v1650808299/background-3907905_1280_ptc8fw.webp');
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
   padding-top: 60px;
-  padding-bottom: 40px;
-  color: white
+  padding-bottom: 120px;
+  color: white;
+  min-height: 100vh;
 }
 body {
   min-height: 100vh;

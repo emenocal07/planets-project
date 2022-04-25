@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 import planetService from '../../services/planet.services'
 import PlanetCard from '../../components/PlanetCard/PlanetCard'
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 import './PlanetListPage.css'
 
 const PlanetListPage = () => {
@@ -28,8 +29,8 @@ const PlanetListPage = () => {
       <Row>
 
         {isLoading
-          ? <h1>Loading...</h1>
-          : planets.map(planet => <Col xs={6} md={4} key={planet._id}><PlanetCard {...planet} /></Col>)}
+          ? <LoadingSpinner/>
+          : planets.map(planet => <Col sm key={planet._id}><PlanetCard {...planet} /></Col>)}
 
       </Row>
     </Container>

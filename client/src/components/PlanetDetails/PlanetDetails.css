@@ -1,15 +1,19 @@
 .detailsCard{
     background: transparent;
-    height: 100vp;
-    margin-right: 90px;
     height: 100vh;
+    margin: 0 auto;
 }
 
 .detailsText {
-    margin-top: 90px;
+    margin-top: 70px;
     display: flex;
-    text-align: left;
+    text-align: justify;
     flex-direction: column;
     align-items:baseline;
 
+}
+
+.detailsImg {
+    object-fit: cover;
+    width:  90%
 }

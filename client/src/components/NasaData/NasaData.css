@@ -1,15 +1,26 @@
 .nasaDetails {
     background-color: transparent;
+    padding-top: 50px;
 }
 
 .nasaImg {
-    width: 70%;
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
     display: block;
     margin: 0px auto;
-   }
+}
 
-   .nasaText {
+.nasaText {
+       padding-top: 20px;
        text-align: justify;
        margin: 0px auto;
-       width: 70%;
-   }
+       width: 100%;
+}
+
+.nasaTitle {
+    padding-top: 10px;
+    text-align: center;
+    margin: 0px auto;
+    width: 100%;
+}

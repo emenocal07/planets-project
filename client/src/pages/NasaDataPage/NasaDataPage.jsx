@@ -1,17 +1,20 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import NasaData from '../../components/NasaData/NasaData'
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
+import nasaService from '../../services/nasa.services'
 
 const NasaDataPage = () => {
 
     const [dayPicture, setDayPicture] = useState([])
+    const [isloading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API}`)
-        .then(response => response.data)
+        nasaService
+            .getTodayPic()
+            .then(response => response.data)
             .then(picture => {
                 setDayPicture(picture)
-                console.log(picture)
+                setIsLoading(false)
             })
             .catch(err => console.log(err))
     }, [])
@@ -20,7 +23,7 @@ const NasaDataPage = () => {
     return (
 
         <>
-            <NasaData dayPicture={dayPicture} />
+            {isloading ? <LoadingSpinner/> : <NasaData dayPicture={dayPicture} />}
         </>
     )
 }
